@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+// Mendefinisikan tipe data union "Informasi Pegawai Perusahaan x"
+union Informasi {
+    char nama [50];
+    int usia;
+    float gaji;
+};
+
+int main() {
+    // Mendeklarasikan sebuah variabel dengan tipe data union Informasi Pegawai Perusahaan x
+    union Informasi data;
+
+    // Mengisi data pegawai pada variabel data
+    printf("Masukkan Nama Pegawai: ");
+    scanf("%s", data.nama);
+
+    // Menampilkan nama pegawai
+    printf("Nama Pegawai: %s\n", data.nama);
+
+    // Mengisi data usia pegawai pada variabel data
+    printf("Masukkan Usia Pegawai: ");
+    scanf("%d", &data.usia);
+
+    // Menampilkan usia pegawai
+    printf("Usia Pegawai: %d tahun\n", data.usia);
+
+    // Mengisi data gaji pegawai pada variabel data
+    printf("Masukkan Gaji: ");
+    scanf("%f", &data.gaji);
+
+    // Menampilkan gaji pegawai 
+    printf("Gaji: %.1f jt\n", data.gaji);
+
+    return 0;
+}
